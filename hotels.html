@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Седона - отели</title>
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="main-header">
@@ -22,22 +24,21 @@
         </header>
 
         <main>
-            <form class="filter" name="filter-form" method="POST" enctype="multipart/form-data"
-            style="background-image: url(img/filter-background.jpg); width: 1200; height: 273; background-position: center; display: inline-block; vertical-align: top;">
+            <form class="filter white-text" name="filter-form" method="POST" enctype="multipart/form-data">
                 <fieldset class="field-group">
                     <legend>инфраструктура:</legend>
                     <label>
                         бассейн
                         <input type="checkbox" name="pool" value="yes" checked>
-                    </label>
+                    </label><br>
                     <label>
                         парковка
                         <input type="checkbox" name="parking" value="yes">
-                    </label>
+                    </label><br>
                     <label>
                         wi-fi
                         <input type="checkbox" name="wi-fi" value="yes">
-                    </label>
+                    </label><br>
                 </fieldset>
 
                 <fieldset class="field-group">
@@ -45,18 +46,19 @@
                     <legend>тип жилья:</legend>
                     <label>
                         гостиница
-                        <input type="checkbox" name="hotel" value="yes" checked>
-                    </label>
+                        <input type="checkbox" name="hotel" value="yes" checked><span></span>
+                    </label><br>
                     <label>
                         мотель
-                        <input type="checkbox" name="motel" value="yes" checked>
-                    </label>
+                        <input type="checkbox" name="motel" value="yes" checked><span></span>
+                    </label><br>
                     <label>
                         апартаменты
-                        <input type="checkbox" name="aparts" value="yes" checked>
-                    </label>
+                        <input type="checkbox" name="aparts" value="yes" checked><span></span>
+                    </label><br>
                 </fieldset>
                 <fieldset class="field-group">
+
                     <legend>Стоимость в сутки (р):</legend>
 
                     <!--<label for="range-value">Стоимость в сутки (р):</label>-->
@@ -66,7 +68,7 @@
                         
                     </div>
                     <input type="range" multiple min="0" max="3000" step="1" id="range-value"><br>
-                    <button class="form-button" type="submit" name="form-button">показать</button>
+                    <button class="form-button white-text" type="submit" name="form-button">показать</button>
                 </fieldset>
             </form>
 
@@ -88,8 +90,8 @@
                 <ul> 
                     
                     <!--карточка 1-->
-                    <li>
-                        <h3>
+                    <li class="catalog-item">
+                        <h3 class="bold">
 							<a href="catalog-item.html">
 								amara resort & spa
 							</a>
@@ -100,62 +102,64 @@
 							alt="Фотография отеля">
 							</a>
 						</p>
-						<p class="catalog-item-price">
+						<p class="catalog-item-price ordinary-text">
                             гостиница<br>
                             от 4000 ₽ <br>	
                         </p>
                         <p>
-                            <span class="button info-button">подробнее</span>
-                            <span class="button booking-button">забронировать</span>
+                            <button class="button-blue small-button-blue" type="button">подробнее</button>
+                            <button class="button-brown small-button-brown" type="button">забронировать</button>
                         </p>
                         <p class="rating">
+                            <div class="four-stars"></div>
+                            <!--<img src="img/star.svg" width="18" height="17" alt="звезда">
                             <img src="img/star.svg" width="18" height="17" alt="звезда">
                             <img src="img/star.svg" width="18" height="17" alt="звезда">
                             <img src="img/star.svg" width="18" height="17" alt="звезда">
-                            <img src="img/star.svg" width="18" height="17" alt="звезда">
-                            <img src="img/star.svg" width="18" height="17" alt="звезда">
+                            <img src="img/star.svg" width="18" height="17" alt="звезда">-->
 
                         </p>
-                        <span class="rating-button">
+                        <span class="rating-back">
                             рейтинг: 8,5
                         </span>
                     </li>
 
                     <!--карточка 2-->
-                    <li>
-                        <h3>
+                    <li class="catalog-item">
+                        <h3 class="bold">
 							<a href="catalog-item.html">
 								Desert Quail Inn
 							</a>
-						</h3>
+						</h3 >
 						<p class="catalog-item-image">
 							<a href="catalog-item.html">
 							<img src="img/hotel-picture-2.jpg" width="135" height="90"
 							alt="Фотография отеля">
 							</a>
 						</p>
-						<p class="catalog-item-price">
+						<p class="catalog-item-price ordinary-text">
                             мотель<br>
                             от 3000 ₽ <br>	
                         </p>
                         <p>
-                            <span class="button info-button">подробнее</span>
-                            <span class="button booking-button">забронировать</span>
+                            <button class="button-blue small-button-blue" type="button">подробнее</button>
+                            <button class="button-brown small-button-brown" type="button">забронировать</button>
                         </p>
                         <p class="rating">
+                                <div class="three-stars"></div>
+                            <!--<img src="img/star.svg" width="18" height="17" alt="звезда">
                             <img src="img/star.svg" width="18" height="17" alt="звезда">
-                            <img src="img/star.svg" width="18" height="17" alt="звезда">
-                            <img src="img/star.svg" width="18" height="17" alt="звезда">
+                            <img src="img/star.svg" width="18" height="17" alt="звезда">-->
                 
                         </p>
-                        <span class="rating-button">
+                        <span class="rating-back">
                             рейтинг: 8,9
                         </span>
                     </li>
 
                     <!--карточка 3-->
-                    <li>
-                        <h3>
+                    <li class="catalog-item">
+                        <h3 class="bold">
 							<a href="catalog-item.html">
 								Villas at Poco Diablo
 							</a>
@@ -166,20 +170,22 @@
 							alt="Фотография отеля">
 							</a>
 						</p>
-						<p class="catalog-item-price">
+						<p class="catalog-item-price ordinary-text">
                             апартаменты<br>
                             от 2000 ₽ <br>	
                         </p>
                         <p>
-                            <span class="button info-button">подробнее</span>
-                            <span class="button booking-button">забронировать</span>
+                            <button class="button-blue small-button-blue" type="button">подробнее</button>
+                            <button class="button-brown small-button-brown" type="button">забронировать</button>
                         </p>
                         <p class="rating">
-                            <img src="img/star.svg" width="18" height="17" alt="звезда">
-                            <img src="img/star.svg" width="18" height="17" alt="звезда">
+                            <div class="two-stars"></div>
+                                
+                            <!--<img src="img/star.svg" width="18" height="17" alt="звезда">
+                            <img src="img/star.svg" width="18" height="17" alt="звезда">-->
                                 
                         </p>
-                        <span class="rating-button">
+                        <span class="rating-back">
                             рейтинг: 9,2
                         </span>
                     </li>
