@@ -170,12 +170,12 @@
               -->
               <label>
                 дата заезда:
-                <input type="date" value="2017-04-24"> <!--Тут placeholder не работает-->
+                <input type="text" name="check-in-date" placeholder="24 апреля 2017" size="17" pattern="^[а-яА-Я0-9-_\.\s]{1,16}$">
               </label><br>
               
               <label>
                 дата выезда:
-                <input type="date" value="2017-04-24"> 
+                <input type="text" name="check-out-date" placeholder="7 июля 2017" size="17" pattern="^[а-яА-Я0-9-_\.\s]{1,16}$"> 
               </label>
               
               <!--это же имитация нативного number, может, лучше использовать связку span и input type="text" для вывода?-->
