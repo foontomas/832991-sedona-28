@@ -12,17 +12,17 @@
                 <li> <a href="info.html">Информация</a></li>
                 <li> <a href="photo-video.html">Фото и видео</a></li>
                 <li class="main-header-logo">
-                   <a href="index.html"><img src="img/index-logo.svg" width="111" height="24"
+                   <a href="index.html"><img src="img/logo.svg" width="111" height="24"
                    alt="Логотип города Седона"></a> 
                 </li>
                 <li> <a href="map.html">Карта штата</a></li>
                 <li> <a href="hotels.html">Гостиницы</a></li>
               </ul>
             </nav>
-          </header>
+        </header>
 
         <main>
-            <form class="filter" name="filter-form">
+            <form class="filter" name="filter-form" style="background-image: url(img/filter-background.jpg); width: 1200; height: 273; background-position: center; /*display: inline-block; vertical-align: top;*/">
                 <fieldset>
                     <!--Здесь будет форма-->
                 </fieldset>
@@ -34,7 +34,7 @@
                 </fieldset>
             </form>
 
-            <div class=sortby>
+            <div class="sortby">
                 <h3>
                     Найдено:3
                 </h3>
@@ -60,7 +60,7 @@
 						</h3>
 						<p class="catalog-item-image">
 							<a href="catalog-item.html">
-							<img src="img/hotel-picture.jpg" width="135" height="90"
+							<img src="img/hotel-picture-1.jpg" width="135" height="90"
 							alt="Фотография отеля">
 							</a>
 						</p>
@@ -94,7 +94,7 @@
 						</h3>
 						<p class="catalog-item-image">
 							<a href="catalog-item.html">
-							<img src="img/hotel-picture.jpg" width="135" height="90"
+							<img src="img/hotel-picture-2.jpg" width="135" height="90"
 							alt="Фотография отеля">
 							</a>
 						</p>
@@ -126,7 +126,7 @@
 						</h3>
 						<p class="catalog-item-image">
 							<a href="catalog-item.html">
-							<img src="img/hotel-picture.jpg" width="135" height="90"
+							<img src="img/hotel-picture-3.jpg" width="135" height="90"
 							alt="Фотография отеля">
 							</a>
 						</p>
@@ -152,26 +152,42 @@
             </section>
         </main>
 
-        <footer>
-                <p class="footer-contacts">
-                  #visitsedona<br>
-                  ТЕЛЕФОН: +7 (495) 666-02-66
-              </p>
-              <div class="footer-social">
-                <ul>
-                  <li><a class="social-button" href="https://twitter.com">Twitter</a></li>
-                  <li><a class="social-button" href="https://facebook.com">Facebook</a></li>
-                  <li><a class="social-button" href="#">Youtube</a></li>	
-                </ul>
-              </div>
-              <p class="footer-copyright">
-                <b>website by:</b>
-                <a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmla.svg"
-                    width="115" height="41" alt="логотип htmlacademy"></a>
-              </p>
+        <footer class="semi-transparency">
+            <p class="footer-contacts">
+              #visitsedona<br>
+              ТЕЛЕФОН: +7 (495) 666-02-66
+          </p>
+          <div class="footer-social" style="background-color: gray;">
+            <!--Внимание! В футере картинки в контейнерах .icon-back, а не текст. Не забудь в стилях ссылки отображать блоками!-->
+            <ul>
+      
+              <li>  
+                <a class="social-button" href="https://twitter.com"> 
+                  <img src="img/tw-icon.svg" alt="логотип Твиттер" width="17" height="15">
+                </a>
+              </li>
+      
+              <li>
+                <a class="social-button" href="https://facebook.com">
+                  <img src="img/fb-icon.svg" alt="логотип Фейсбук" width="12" height="22">
+                </a>
+              </li>
+              <li>
+                <a class="social-button" href="https://youtube.com">
+                  <img src="img/youtube-icon.svg" alt="логотип Ютуб" width="20" height="16">
+                </a>
+              </li>	
+            </ul>
+          </div>
+          <p class="footer-copyright" style="background-color: gray;">
+            <b>website by:</b>
+            <a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmla.svg"
+                width="115" height="41" alt="логотип htmlacademy"></a>
+          </p>
+      
         </footer>
 
     
 
-  </body>
+    </body>
 </html>
