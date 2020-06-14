@@ -7,7 +7,7 @@
   </head>
 <body>
   <header class="main-header">
-    <nav class="main-navigation">
+    <nav class="main-navigation" tabindex="1">
       <ul class="site-navigation">
         <li> <a href="info.html">Информация</a></li>
         <li> <a href="photo-video.html">Фото и видео</a></li>
@@ -150,9 +150,50 @@
         <p>Укажите предполагаемые даты поездки, <br>
           и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <div class="interactive">
-            <button class="brown-button" type="submit">поиск гостиницы в седоне</button>
-            <form class="hidden">
+            <button class="brown-button" type="button">поиск гостиницы в седоне</button>
+            <form class="visually-hidden" enctype="multipart/form-data">
               <!--Здесь будет форма-->
+              <!--Не могу найти способ приведения к виду макета. Варианты:
+                <input type="date" value="2017-04-24">
+                или 
+                <input type="text" name="check-in-date" placeholder="24 апреля 2017" pattern="[1-31]{,2}/s^[А-Яа-я]{,8}/s[2017-2117]{4}">
+                или
+                поместить три поля ввода в один блок, number, select, number, с паттернами. Визуально можно попробовать спрятать стилями
+                display: inline-block или float, но так лучше делать для пары input+submit, а это какие-то костыли.
+                Кажется, тут нужен JS. Вводить номер месяца, поместить названия месяцев в массив, возвращать
+                название месяца по номеру элемента массива.
+                Вот так ещё бывает:
+                new Date().toLocaleString('ru', {       
+                month: 'long'       
+                });
+ 
+              -->
+              <label>
+                дата заезда:
+                <input type="date" value="2017-04-24"> <!--Тут placeholder не работает-->
+              </label><br>
+              
+              <label>
+                дата выезда:
+                <input type="date" value="2017-04-24"> 
+              </label>
+              
+              <!--это же имитация нативного number, может, лучше использовать связку span и input type="text" для вывода?-->
+              <div class="number">
+
+                <label for="adults">взрослые:</label>
+                <button class="minus" name="bminus" type="button">-</button>
+                  <input type="number" id="adults" value="1" min="0" max="100" step="1">
+                <button class="plus" name="bplus" type="button">+</button>
+
+                <label for="child">дети:</label>
+                <button class="minus" name="bminus" type="button">-</button>
+                  <input type="number" id="child" value="1" min="0" max="100" step="1">
+                <button class="plus" name="bplus" type="button">+</button>
+                
+              </div>
+
+              <button class="blue-back" type="submit" name="search">найти</button>
             </form>
 
           </div>

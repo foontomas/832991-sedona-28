@@ -7,7 +7,7 @@
     </head>
     <body>
         <header class="main-header">
-            <nav class="main-navigation">
+            <nav class="main-navigation" >
               <ul class="site-navigation">
                 <li> <a href="info.html">Информация</a></li>
                 <li> <a href="photo-video.html">Фото и видео</a></li>
@@ -22,15 +22,51 @@
         </header>
 
         <main>
-            <form class="filter" name="filter-form" style="background-image: url(img/filter-background.jpg); width: 1200; height: 273; background-position: center; /*display: inline-block; vertical-align: top;*/">
-                <fieldset>
-                    <!--Здесь будет форма-->
+            <form class="filter" name="filter-form" method="POST" enctype="multipart/form-data"
+            style="background-image: url(img/filter-background.jpg); width: 1200; height: 273; background-position: center; display: inline-block; vertical-align: top;">
+                <fieldset class="field-group">
+                    <legend>инфраструктура:</legend>
+                    <label>
+                        бассейн
+                        <input type="checkbox" name="pool" value="yes" checked>
+                    </label>
+                    <label>
+                        парковка
+                        <input type="checkbox" name="parking" value="yes">
+                    </label>
+                    <label>
+                        wi-fi
+                        <input type="checkbox" name="wi-fi" value="yes">
+                    </label>
                 </fieldset>
-                <fieldset>
-                    <!--Здесь будет форма-->
+
+                <fieldset class="field-group">
+                    
+                    <legend>тип жилья:</legend>
+                    <label>
+                        гостиница
+                        <input type="checkbox" name="hotel" value="yes" checked>
+                    </label>
+                    <label>
+                        мотель
+                        <input type="checkbox" name="motel" value="yes" checked>
+                    </label>
+                    <label>
+                        апартаменты
+                        <input type="checkbox" name="aparts" value="yes" checked>
+                    </label>
                 </fieldset>
-                <fieldset>
-                    <!--Здесь будет форма-->
+                <fieldset class="field-group">
+                    <legend>Стоимость в сутки (р):</legend>
+
+                    <!--<label for="range-value">Стоимость в сутки (р):</label>-->
+                    <div>
+                        <span class="range-from" style="margin-right:30px;">от 0</span>
+                        <span  class="range-to" style="margin-left:30px;">до 3000</span>
+                        
+                    </div>
+                    <input type="range" min="0" max="3000" step="1" id="range-value"><br>
+                    <button class="form-button" type="submit" name="form-button">показать</button>
                 </fieldset>
             </form>
 
