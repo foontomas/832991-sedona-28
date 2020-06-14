@@ -2,11 +2,187 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>HTML Academy: Седона - главная страница</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
-  <body>
+<body>
+  <header class="main-header">
+    <nav class="main-navigation">
+      <ul class="site-navigation">
+        <li> <a href="info.html">Информация</a></li>
+        <li> <a href="photo-video.html">Фото и видео</a></li>
+        <li class="main-header-logo">
+           <a href="index.html"><img src="img/index-logo.svg" width="111" height="24"
+           alt="Логотип города Седона"></a> 
+        </li>
+        <li> <a href="map.html">Карта штата</a></li>
+        <li> <a href="hotels.html">Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <main>
+      <section class="welcome-banner">
+        <img src="img/background-photo.png" alt="" width="1200" height="773">
+        <img src="img/welcome.png" width="459" alt="" height="353">
+        <img src="img/polygon.png" width="1203" alt="" height="59">
+        <div class="white-back">
+          <h3>Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
+      </section>
 
-  </body>
+      <section class="inner-grid">
+        <h2 class="hidden">преимущества</h2>
+      <!---Часть кода, отмеченная на макете красным, пропущена Тут, скорее всего, много блоков
+      <div> со свойством display:flex-->
+        <div class="font-white blue-back grid-item">
+          <p class="bold"> 
+            Настоящий городок
+          </p>
+           <div class="ordinary-text"> 
+              <p class="number">- №1 -</p>
+              <p>
+                Седона — не аттракцион для туристов,
+                там течёт своя жизнь
+              </p>
+            </div>
+        </div>
+        
+        <div class="grid-item content-image">
+          <img src="img/feature-picture.png" alt="город Седона" width="800" height="256">
+        </div>
+
+        <div class="grid-item">
+          <img src="img/icon-1.png" alt="пиктограмма домик" width="75" height="72">
+          <p class="bold">жильё</p>
+          <p class="ordinary-text">
+            Рекомендуем пожить в настоящем  
+            мотеле, всё как в кино!
+          </p>
+         </div>
+
+        <div class="grid-item">
+          <img src="img/icon-3.png" alt="пиктограмма бургер" width="74" height="70">
+          <p class="bold">еда</p>
+          <p class="ordinary-text">
+            Всегда заказывайте фирменный бургер, 
+            вы не разочаруетесь!
+          </p>
+        </div>
+
+        <div class="grid-item">
+          <img src="img/icon-2.png" alt="пиктограмма подарок" width="64" height="76">
+          <p class="bold">сувениры</p>
+          <p class="ordinary-text">
+            Не только китайского, но и местного
+            производства!
+          </p>
+        </div>
+
+        <div class="grid-item content-image">
+          <img src="img/layer-5.png" alt="красные скалы Седоны" width="800" height="256">
+          
+        </div>
+
+        <div class="font-white blue-back grid-item">
+            <p class="bold"> 
+              там есть
+              мост дъявола
+            </p>
+            <div class="ordinary-text">
+                
+              <p class="number">— №2 —</p>>
+              <p>
+                Да, по нему можно пройти! Если, конечно, 
+                вы осмелитесь
+              </p>
+            </div>   
+        </div>
+
+        <div class="grid-item">
+          <p class="bold"> 
+              небольшая
+              площадь
+          </p>
+          <div class="ordinary-text">
+              
+            <p class="number">— №3 —</p>
+            <p>
+              Все достопримечательности
+              находятся очень близко
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-item">
+            <p class="bold"> 
+                красивая
+                дорога
+            </p>
+            <div class="ordinary-text">
+              <p class="number">— №4 —</p>>
+              <p>  
+                Ехать в Седону из Лас-Вегаса совсем
+                не скучно!
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-item">
+              <p class="bold"> 
+                  мало
+                  туристов
+              </p>
+              <div class="ordinary-text">
+                <p class="number">— №5 —</p>>
+                <p> 
+                Большинство едет в гранд каньон
+                и толпится там
+                </p> 
+              </div>
+            </div>
+      </section>
+
+      <section>
+        <h2>поиск гостиницы в седоне</h2>
+        <p>Заинтересовались?</p>
+        <p>Укажите предполагаемые даты поездки, <br>
+          и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <div class="interactive">
+            <button class="brown-button" type="submit">поиск гостиницы в седоне</button>
+            <form class="hidden">
+              <!--Здесь будет форма-->
+            </form>
+
+          </div>
+      </section>
+      <div class="map">
+        <!--Здесь будет карта-->
+        <img src="img/map.png" alt="карта Седоны" width="1200" height="474">
+      </div>
+    </main>
+
+    <footer>
+      <p class="footer-contacts">
+        #visitsedona<br>
+        ТЕЛЕФОН: +7 (495) 666-02-66
+    </p>
+    <div class="footer-social">
+      <ul>
+        <li><a class="social-button" href="https://twitter.com">Twitter</a></li>
+        <li><a class="social-button" href="https://facebook.com">Facebook</a></li>
+        <li><a class="social-button" href="#">Youtube</a></li>	
+      </ul>
+    </div>
+    <p class="footer-copyright">
+      <b>website by:</b>
+      <a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmla.svg"
+          width="115" height="41" alt="логотип htmlacademy"></a>
+    </p>
+
+    </footer>
+
+</body>
+
 </html>
