@@ -22,12 +22,15 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+}
 .main-container{
   width: 1200px;
-  /*height: 2762px;*/
   box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
   margin: 0 auto;
   background-color: #ffffff;
+  position: relative;
 }
 
 .main-navigation {
@@ -38,7 +41,7 @@ a {
   text-align: center;
 }
 
-h3 {
+.header-3 {
   font-size: 21px;
   line-height: 26px;
 }
@@ -54,6 +57,7 @@ h3 {
 .site-navigation a {
   color: #000000;
 }
+
 
 .main-navigation a:hover,
 .main-navigation a:focus {
@@ -72,18 +76,33 @@ h3 {
 
 .site-navigation li {
 display: flex;
-outline: 1px solid #666;
 flex-basis: 239px;
 align-items: center;
 justify-content: center;
-height: 56px; /*если без высоты - рисует с заданными в макете внутренними отступами 79px.
-высота строки 26, по 22 внутр. отступы, итого высота li на 9px больше, чем нужно и лого не выходит за пределы контейнера*/
+padding-top: 15.25px;
+padding-bottom: 15.25px;
 }
-.site-navigation
+
 .main-header-logo {
-  flex-basis: 244px;
-  display: block;
+  /*flex-basis: 244px;
+  display: block;*/
+  position: absolute;
+  top:0px;
+  left: 50%;
+  margin-left: -70px;
+  
+
   z-index: 5;
+}
+
+.main-header-back{
+  width: 244px;
+}
+.main-navigation{
+  position: relative;
+}
+.site-navigation a.active{
+  color: #766357;
 }
 
 .blue-back,
@@ -109,15 +128,6 @@ height: 56px; /*если без высоты - рисует с заданным�
 
 }
 
-/*.cover{
-  width:280px;
-  height: 146px;
-  margin: 0px;
-}*/
-
-.blue-back p{
-  /*margin: 0px;*/
-}
 .white-text {
   color: #ffffff;
   font-size: 14px;
@@ -131,17 +141,34 @@ height: 56px; /*если без высоты - рисует с заданным�
 
 .blue-back {
   color: #ffffff;
-  /*width: 280px;*/
-  /*height: 256px;*/
-  /*padding: 43px 60px 61px;*/
+ 
+}
+
+.declare h3{
+  width: 445px;
+  text-align: center;
+  margin: 61px auto 38px auto;
+}
+.declare p{
+  margin: 0 auto 56px auto;
 }
 
 .inner-grid{
   display: flex;
   flex-direction: row;
-  /*justify-content: center;*/
   flex-wrap: wrap;
-  outline: 1px dashed #666;
+  width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.inner-grid .bold{
+  display: block;
+  
+  width: 160px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-brown {
@@ -179,17 +206,22 @@ height: 56px; /*если без высоты - рисует с заданным�
 
 .welcome-banner{
   text-align: center;
-  width: 1200px;
-  height: 508px;
+  width: 100%;
+  padding:250.5px 0;
   background-color: #5496bd;
-  
-  background-image: url(../img/welcome.svg), url(../img/polygon.png), url(../img/background-photo.jpg);
-  background-size: 40%, 100%, 100%;
-  background-position: center, bottom, top;
-
-  border: 1px solid red;
+  background-image: url(../img/welcome.svg), url(../img/background-photo.jpg);
+  background-size: 459px 353px, cover;
+  background-position: center, center 30%;
   position: relative;
-  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.welcome-banner svg{
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  
 }
 
 .bold{
@@ -215,56 +247,54 @@ height: 56px; /*если без высоты - рисует с заданным�
 }
 
 .form-decor {
-  
-  border: 1px solid red;
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
   line-height: 26px;
   font-weight: 700;
-  color:#000000;
-  
-  
+  color:#000000; 
 }
 
 .modal-show {
   display: inline-block;
-  /*animation: bounce 0.6s;*/
+  animation: bounce 0.6s;
+  vertical-align: middle;
 }
 
 .visually-hidden{
   display: none;
 }
 
-/*@keyframes bounce {
+@keyframes bounce {
   0% {
-    transform: translateY(-2000px);
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
   }
 
-  70% {
+  20% {
+    transform: translateY(10px);
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    transform: translateY(20px);
+    animation-timing-function: ease-out;
+  }
+
+  60% {
     transform: translateY(30px);
+    animation-timing-function: ease-in;
   }
 
-  90% {
+
+  80% {
     transform: translateY(-10px);
+    animation-timing-function: ease-in;
   }
 
   100% {
     transform: translateY(0);
+    animation-timing-function: ease-in;
   }
-}*/
-/*@keyframes bounce{
-	from{
-	top: 25px;
-	animation-timing-function: ease-in;
-	}
-	50%{
-		top:50px;
-		 animation-timing-function: ease-out;
-	}
-	to{
-		top: 100px;
-	}
-	
-  }*/
+}
 
 @keyframes shake {
   0%,
@@ -299,18 +329,37 @@ height: 56px; /*если без высоты - рисует с заданным�
   
 }
 
-.content-image{
-  width: 800px;
-  /*height: 256px;*/
-  display: flex;
-  /*outline: 1px solid red;*/
+.text-card{
+  width: 280px;
+  text-align: center;
+}
+.text-card p{
   margin: 0px;
-  padding: 0px;
+}
+.text-card .bold{
+  margin-top:0px;
+  margin-bottom: auto;
+}
+.text-card div{
+  margin-bottom: 0;
+}
+.text-card .card-number{
+  margin: 26px 0px;
 }
 
-.grid-item .content-image{
+.blue-back.grid-item{
+  padding-top: 43px;
+  padding-right: 60px;
+  padding-left:60px;;
+  padding-bottom:55px;
+  
+}
+
+.content-image{
   width: 800px;
-  height: 256px;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
 }
 
 .big-button-blue{
@@ -344,56 +393,171 @@ height: 56px; /*если без высоты - рисует с заданным�
   line-height: 24px;
 }
 
+
+
 .interactive {
   text-align: center;
   
 }
 
+.map{
+  position: relative;
+}
+
+.map iframe{
+  width: 100%;
+  height:713px;
+  border: 0px;
+}
+
+/*Форма на главной странице*/
+
 .map form{
   padding: 55px;
-  border: solid 1px red;
-  /*width: 568px;*/
-  margin: 0 316px;
-  
+  width: 458px;
   position: absolute;
   z-index: 15;
   background-color: #ffffff;
-
+  box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+  margin: auto; 
+  top: 0; left: 0; right: 0;
 }
 .form-decor input {
   color:#000000;
+  background-color: #f2f2f2;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  border: none;
   width: 346px;
-  /*height: 38px;*/
+  box-sizing: border-box;
   padding-left: 13px;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  margin-bottom: 29px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  outline: none;
+  border: none;
 }
+
+.form-decor input::-webkit-input-placeholder {
+  color: #000000;
+ } 
 
 .number input{
   width: 38px;
-  padding-left: 0px;
+  height:38px;
+  
   text-align: center;
+  margin:0px;
+  padding:0px;
+  
+}
+.filter-range input::-webkit-inner-spin-button,
+.filter-range input::-webkit-outer-spin-button,
+.number input::-webkit-inner-spin-button, 
+.number input::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+  margin: 0;
+}
+
+.filter-range input,
+.filter-range input,
+.number input, 
+.number input {
+  -moz-appearance:textfield;
 }
 
 .number button{
   width: 38px;
-  height: 38px;
   background-color: #f2f2f2;
+  border: none;
+  margin: 0px;
+  padding: 11px 0;
 }
 
-/*.htmla-link{
-  
-  width: 115px; 
-  height: 41px;
-  mask-image: url('img/logo-htmla.svg');
-  background-color: #231f20;
-}*/
+.number button:hover path{
+  fill: #000000;
+}
 
+.number button:active path{
+  fill: #81b3d2;
+  outline: none;
+}
+
+.number-item{
+  width: 114px;
+  display: flex;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+}
+
+.number-cover{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.number{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 54px;
+  align-items: baseline;
+}
+
+.input-cover{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 29px;
+  position: relative;
+}
+
+.input-field{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 346px;
+  border: none;
+  vertical-align: middle;
+}
+
+.input-field a{
+  
+  position: absolute;
+  z-index: 6;
+  right: 9px;
+  top:8px;
+  display: flex;
+  
+}
+
+.input-field svg{
+  fill: #cacaca;
+}
+
+.input-field a:hover svg{
+  fill: black;
+}
+
+.input-field a:active svg{
+  fill: #81b3d2;
+}
+
+input[type="text"]:hover.input-back{
+  background-color: #ebebeb;
+  border: none;
+}
+
+input[type="text"]:focus.input-back{
+  background-color: #ffffff;
+  outline: solid 2px #e5e5e5;
+  border: none;
+}
+
+
+/*Форма на странице hotels.html*/
 .sortby{
   display: flex;
   flex-direction: row;
@@ -413,6 +577,7 @@ height: 56px; /*если без высоты - рисует с заданным�
   display: inline-block;
   margin-left: 33px;
   text-align: start;
+  vertical-align: baseline;
   
 }
 .sortby ul{
@@ -423,19 +588,32 @@ height: 56px; /*если без высоты - рисует с заданным�
 .sortby span {
   margin-left: 49px;
 }
-.sortby a {
+/*для IE*/
+.sortby a,
+.sortby a:visited {
   color: rgba(0, 0, 0, 0.3);
-  text-decoration-line: underline;
-  text-decoration-color: #81b3d2;
-  text-decoration-style: dashed;
+  text-decoration: none;
+  border-bottom: 1px dashed #81b3d2;
 }
+
+.arrow a{
+  text-decoration: none;
+  border-bottom: none;
+}
+
 .sortby a:hover,
 .sortby a:focus {
   color:#81b3d2;
 }
+.sortby a:focus {
+  text-decoration: none;
+  border-bottom: none;
+  outline: none;
+}
 .sortby a:active {
   color: #000000;
   text-decoration: none;
+  border-bottom: none;
 }
 
  .arrow {
@@ -466,8 +644,11 @@ height: 56px; /*если без высоты - рисует с заданным�
   padding: 30px 73px 30px 72px;
 }
 
-.catalog-item a{
+.catalog-item a,
+.description .phone,
+.description .phone:visited{
   color:#000000;
+  text-decoration: none;
 }
 
 .catalog-item-image{
@@ -481,23 +662,29 @@ height: 56px; /*если без высоты - рисует с заданным�
   flex-wrap: wrap;
   width: 258px;
   margin-top: 0px;
- 
-  margin-right: 450px;
   margin-left: 30px;
 }
 
 .description a {
   margin-bottom: 0px;
   display: inline-block;
+  vertical-align: top;
+ 
 }
 
-.description a:hover,
-.description .arrow-up:focus {
+.description .phone:hover,
+.description .arrow-up:focus,
+.footer-contacts a:hover {
   color: #81b3d2;
 }
 
-.description a:active{
+.description a:active,
+.footer-contacts a:active{
   color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-contacts a{
+  color: #000000;
 }
 
 .description h3{
@@ -507,21 +694,28 @@ height: 56px; /*если без высоты - рисует с заданным�
 .description
 .ordinary-text {
   display: inline-block;
+  vertical-align: middle;
   margin-right: 0px;
-  margin-bottom: 18px;
   margin-top: 0px;
 
 }
 
 .rating{
   text-align: end;
-  margin-left: auto;
+  width:110px;
+  display: flex;
+  flex-direction: column;
+  align-items:  flex-end;
+  justify-content: flex-start;
+  margin-left: auto; 
+}
 
+.rating div{
+  
 }
 
 .column {
   display: flex;
-  width: 142px;
   flex-direction: column;
   align-items:  flex-start;
   justify-content: flex-start;
@@ -548,18 +742,26 @@ height: 56px; /*если без высоты - рисует с заданным�
 
 .catalog li{
   display: flex;
-  outline: 1px solid blue;
   flex-direction: row;
   flex-wrap: wrap;
+  border-top: 1px solid #f2f2f2;
+}
+
+.catalog li:last-child{
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .rating-back{
   width: 110px;
-  height: 27px;
   background-color:#f2f2f2;
   color: #666666;
   font-weight: 400;
-  padding: 5px 13px 6px 16px;
+  padding-top: 3px;
+  padding-bottom: 3.25px;
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 47.5px;
+  margin-bottom: 0px;
 }
 
 .semi-transparency{
@@ -568,6 +770,15 @@ height: 56px; /*если без высоты - рисует с заданным�
   align-items: center;
   opacity: 0.9;
   z-index: 5;
+  background-color: #ffffff;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width:100%;
+}
+.main-page{
+  position:absolute;
+  bottom:0px;
+
 }
 
 .footer-social{
@@ -579,62 +790,6 @@ height: 56px; /*если без высоты - рисует с заданным�
  
 }
 
-/*.footer-social ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}*/
-
-/*.footer-social a:active,
-.footer-social a:focus  {
-  background-color: rgba(255, 255, 255, 0.3);
-  z-index: 5;
-}*/
-/*
-.icon-back li{
-  display: inline-block;
-  vertical-align: middle;
-  
-}
-.icon-back img {
-  align-content: center;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.icon-back {
-  margin: 0px;
-  display: flex;
-  padding: 0px;
-  justify-content: space-around;
-}
-*/
-
-/*.footer-social a{
-  width: 46px;
-  height: 48px;
-  background-color: #81b3d2;
-  display: inline-block;
-}
-
-.twitter{
-  background-image: url('../img/tw-icon.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.facebook{
-  background-image: url('../img/fb-icon.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.youtube{
-  background-image: url('../img/youtube-icon.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-*/
 .footer-social a{
   width: 46px;
   height: 48px;
@@ -651,26 +806,24 @@ height: 56px; /*если без высоты - рисует с заданным�
   margin-right: 0px;
 }
 
-.twitter svg{
-  
-  
-  /*vertical-align: middle;*/
-}
 
 .footer-social a:active .icon{
   fill: rgba(255, 255, 255, 0.3);
 }
 
 .footer-contacts{
-  text-align: left;
+  text-align: center;
   text-decoration: none; /*в Edge всё равно подчёркивает телефон, как ссылку и выделяет синим */
+  display: flex;
+  flex-wrap: wrap;
+  width: 232px;
 }
 
 .footer-copyright{
   display: flex;
   align-items: center;
 }
-.footer-copyright b{
+.footer-copyright span{
   margin-right: 10px;
 }
 
@@ -689,15 +842,14 @@ height: 56px; /*если без высоты - рисует с заданным�
 
 .filter {
   background-image: url(../img/filter-background.jpg);
+  background-color: #5496bd;
   background-repeat: no-repeat;
-  width: 1054px;
-  /*height: 273px; */
+  background-size: cover;
   background-position: center;
-  display: flex;
   vertical-align: top;
-  border: solid 2px #ffffff;
   padding: 31px 72px 35px 72px;
-  /*justify-content: space-between;*/
+  display: flex;
+  flex-wrap: wrap;
 }
 .filter legend{
   line-height: 21px;
@@ -709,7 +861,6 @@ height: 56px; /*если без высоты - рисует с заданным�
 
 .filter fieldset{
   border: none;
-  /*display: inline-block;*/
   text-align: left;
   vertical-align: top;
   padding: 0px;
@@ -717,13 +868,11 @@ height: 56px; /*если без высоты - рисует с заданным�
   width: 139px;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .filter button{
-  /*background: #fff; /* запасной цвет для старых браузеров */
   background-color: transparent;
-  /* rgba(255, 255, 255, 0.1);*/
   border-radius: 3px;
   margin: 0 auto;
   
@@ -736,7 +885,6 @@ input[type="checkbox"] {
 
 
  .filter input[type="checkbox"]~span {
-  /*content: " ";*/
   display: inline-block;
   width: 27px;
   height: 23px;
@@ -745,105 +893,33 @@ input[type="checkbox"] {
   background-repeat: no-repeat;
 }
 
-.filter input[type="checkbox"]:checked~span {
-  /*content: " ";*/
-  /*display: inline-block;
-  width: 27px;
-  height: 23px;
-  vertical-align: bottom;*/
+.filter input[type="checkbox"]:checked~span{
+
   background-image: url(../img/checkbox-on.png);
-  /*background-repeat: no-repeat;*/
-}
-
-
-
-/*input[type="checkbox"] {
-  display: none;
- }
-
-
-.filter label::after {
-  content: " ";
-  display: inline-block;
-  width: 27px;
-  height: 23px;
-  vertical-align: bottom;
-  
-  }
-
-  /*label::after{
-  content: " ";
-  background-image: url(../img/checkbox-on.png);
-  background-repeat: no-repeat;
-  width: 27px;
-  height: 23px;
-  vertical-align: bottom;
-}*/
-
-/*label:after+input:checked {
-  content: " ";
-  background-image: url(../img/checkbox-off.png);
-  background-repeat: no-repeat;
-}
-/*input[type="checkbox"]:disabled{
-  background-image: url(../img/checkbox-off.png);
-  background-repeat: no-repeat;*/
-  /*.filter input[type="checkbox"]:checked{
-    display: inline-block;
-    background-image: url(../img/checkbox-on.png);
-    width: 27px;
-    height: 23px;
-    background-repeat: no-repeat;
-    vertical-align: bottom;
-   }*/
-
-   /*.field-group{
-  width: 139px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}*/
-
-/* Мои стили для формы с ранжированием
-.wide {
-  width: 314px;
-}
-
-.field-group div{
-  width: 314px; 
-  outline: solid white 1px;
-  margin-top: 13px;
-  display: flex;
-}
-
-.field-group .range-to,
-.field-group .range-from {
-  margin: 0px;
-  padding: 0px;
-  width: 157px;
-  text-align: center;
-  display: inline-block;
-}
-.range-from p{
-  margin: 11px 0;
-}
-
-#range-value {
-  width: 317px;
-  margin-top: 13px;
-  margin-bottom: 50px;
 
 }
 
-/*Стили для куска формы с ранжированием из демонстрации*/
+.filter input[type="checkbox"]:disabled~span{
+
+  background-image: url(../img/checkbox-off-3.png);
+
+}
+.filter input[type="checkbox"]:checked:disabled~span{
+
+  background-image: url(../img/checkbox-on-2.png);
+
+}
+
 .filter-range {
   width: 330px;
   margin-top: 0px;
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: 0px; 
 
   color: #ffffff;
   text-transform: uppercase;
+  position: absolute;
+  right: 72px;
 }
 
 .filter-range-title {
@@ -973,12 +1049,6 @@ input[type="checkbox"] {
   background: #ffffff;
 }
 
-
-/*Выравниваю лейблы к инпутам в форме фильтрации.
-Есть подозрение, что это обычный justify-content: space-between,
-но он почему-то не работает((*/
-
-
 .filter fieldset:nth-child(1) label,
 .filter fieldset:nth-child(2) label{
  margin-bottom: 22px;
@@ -998,9 +1068,11 @@ input[type="checkbox"] {
   margin-right: 147px;
 }
 
-.filter fieldset:nth-child(2) {
-  margin-right: 314px;
+.edge label{
+  display: inline-block;
+  vertical-align: baseline;
 }
+
 
 .form-button {
   width: 133px;
@@ -1015,10 +1087,12 @@ input[type="checkbox"] {
   background-image: url(../img/star.svg);
   background-repeat: space no-repeat;
   background-size: 18px 17px;
+  vertical-align: middle;
   }
 
   .three-stars{
   display: inline-block;
+  vertical-align: middle;
   width: 64px;
   height: 17px;
   background-image: url(../img/star.svg);
@@ -1028,6 +1102,7 @@ input[type="checkbox"] {
 
 .two-stars{
   display: inline-block;
+  vertical-align: middle;
   width: 41px;
   height: 17px;
   background-image: url(../img/star.svg);
@@ -1035,3 +1110,4 @@ input[type="checkbox"] {
   background-size: 18px 17px;
 }
 
+/*Спасибо за проверку! :-)*/
