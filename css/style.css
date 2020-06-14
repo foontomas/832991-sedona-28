@@ -14,7 +14,7 @@ body {
 
 a:hover,
 button:hover{
-  cursor:pointer;
+  cursor: pointer;
 }
 
 
@@ -105,6 +105,7 @@ height: 56px; /*если без высоты - рисует с заданным�
 .footer-social a:active, 
 .button-blue:active {
   background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
 
 }
 
@@ -214,7 +215,7 @@ height: 56px; /*если без высоты - рисует с заданным�
 }
 
 .form-decor {
-  display: inline-block;
+  
   border: 1px solid red;
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
   line-height: 26px;
@@ -222,6 +223,73 @@ height: 56px; /*если без высоты - рисует с заданным�
   color:#000000;
   
   
+}
+
+.modal-show {
+  display: inline-block;
+  /*animation: bounce 0.6s;*/
+}
+
+.visually-hidden{
+  display: none;
+}
+
+/*@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}*/
+/*@keyframes bounce{
+	from{
+	top: 25px;
+	animation-timing-function: ease-in;
+	}
+	50%{
+		top:50px;
+		 animation-timing-function: ease-out;
+	}
+	to{
+		top: 100px;
+	}
+	
+  }*/
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .grid-item{
@@ -423,6 +491,15 @@ height: 56px; /*если без высоты - рисует с заданным�
   display: inline-block;
 }
 
+.description a:hover,
+.description .arrow-up:focus {
+  color: #81b3d2;
+}
+
+.description a:active{
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .description h3{
   margin: 0px;
 }
@@ -494,15 +571,25 @@ height: 56px; /*если без высоты - рисует с заданным�
 }
 
 .footer-social{
-  display: inline-block;
+  display: flex;
   width: 150px;
+  
+  flex-direction: row;
+  flex-wrap: nowrap;
  
 }
 
-.footer-social ul{
+/*.footer-social ul{
   display: flex;
   flex-direction: row;
-}
+  justify-content: space-between;
+}*/
+
+/*.footer-social a:active,
+.footer-social a:focus  {
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 5;
+}*/
 /*
 .icon-back li{
   display: inline-block;
@@ -523,7 +610,7 @@ height: 56px; /*если без высоты - рисует с заданным�
 }
 */
 
-.footer-social a{
+/*.footer-social a{
   width: 46px;
   height: 48px;
   background-color: #81b3d2;
@@ -547,8 +634,32 @@ height: 56px; /*если без высоты - рисует с заданным�
   background-repeat: no-repeat;
   background-position: center;
 }
+*/
+.footer-social a{
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+}
 
+.footer-social a:nth-child(3){
+  margin-right: 0px;
+}
 
+.twitter svg{
+  
+  
+  /*vertical-align: middle;*/
+}
+
+.footer-social a:active .icon{
+  fill: rgba(255, 255, 255, 0.3);
+}
 
 .footer-contacts{
   text-align: left;
@@ -572,7 +683,7 @@ height: 56px; /*если без высоты - рисует с заданным�
   fill: #81b3d2;
 }
 
-.htmla-cprght:active{
+.htmla-link:active .htmla-cprght{
   fill: #bdbbbc;
 }
 
@@ -585,8 +696,8 @@ height: 56px; /*если без высоты - рисует с заданным�
   display: flex;
   vertical-align: top;
   border: solid 2px #ffffff;
-  padding: 31px 74px 35px 72px;
-  justify-content: space-between;
+  padding: 31px 72px 35px 72px;
+  /*justify-content: space-between;*/
 }
 .filter legend{
   line-height: 21px;
@@ -693,6 +804,7 @@ input[type="checkbox"] {
   flex-wrap: nowrap;
 }*/
 
+/* Мои стили для формы с ранжированием
 .wide {
   width: 314px;
 }
@@ -723,18 +835,158 @@ input[type="checkbox"] {
 
 }
 
+/*Стили для куска формы с ранжированием из демонстрации*/
+.filter-range {
+  width: 330px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto; 
+
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range-title {
+  margin-bottom: 13px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  
+  height: 36px;
+  margin-bottom: 20px;
+  
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
+
 /*Выравниваю лейблы к инпутам в форме фильтрации.
 Есть подозрение, что это обычный justify-content: space-between,
 но он почему-то не работает((*/
 
-.filter fieldset:nth-child(1) legend,
-.filter fieldset:nth-child(1) label{
- margin-bottom: 36px;
+
+.filter fieldset:nth-child(1) label,
+.filter fieldset:nth-child(2) label{
+ margin-bottom: 22px;
 }
 
-.filter fieldset:nth-child(2) legend,
-.filter fieldset:nth-child(2) label{
- margin-bottom: 36px;
+.filter fieldset:nth-child(1) legend,
+.filter fieldset:nth-child(2) legend {
+  margin-bottom: 28px;
 }
 
 .filter fieldset:nth-child(1) label:last-child,
@@ -742,10 +994,19 @@ input[type="checkbox"] {
  margin-bottom: 0px;
 }
 
+.filter fieldset:nth-child(1) {
+  margin-right: 147px;
+}
+
+.filter fieldset:nth-child(2) {
+  margin-right: 314px;
+}
+
 .form-button {
   width: 133px;
   height: 32px;
   }
+  
 
 .four-stars{
   display: inline-block;
@@ -773,3 +1034,4 @@ input[type="checkbox"] {
   background-repeat: space no-repeat;
   background-size: 18px 17px;
 }
+
