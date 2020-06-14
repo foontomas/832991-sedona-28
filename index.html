@@ -15,7 +15,7 @@
         <li> <a href="info.html">Информация</a></li>
         <li> <a href="photo-video.html">Фото и видео</a></li>
         <li class="main-header-logo">
-           <a href="index.html"><img src="img/logo.svg" width="111" height="24"
+           <a href="index.html"><img src="img/logo.svg" width="140" height="71"
            alt="Логотип города Седона"></a> 
         </li>
         <li> <a href="map.html">Карта штата</a></li>
@@ -44,16 +44,17 @@
       <!---Часть кода, отмеченная на макете красным, пропущена Тут, скорее всего, много блоков
       <div> со свойством display:flex-->
         <div class="font-white blue-back grid-item">
-          <p class="bold"> 
-            Настоящий городок
-          </p>
-           <div class="ordinary-text">
-              <p class="number">- №1 -</p>
-              <p>
-                Седона — не аттракцион для туристов,
-                там течёт своя жизнь
-              </p>
-            </div>
+          <!--<div class="cover">-->
+            <p class="bold"> 
+              Настоящий городок
+            </p>
+             <div class="ordinary-text">
+                <p class="number">- №1 -</p>
+                <p>
+                  Седона — не аттракцион для туристов, там течёт своя жизнь
+                </p>
+             </div>
+          <!--</div>-->
         </div>
         
         <div class="grid-item content-image">
@@ -211,34 +212,19 @@
       </div>
     </main>
 
-    <footer class="semi-transparency">
-      <p class="footer-contacts bold lh-26px">
-        #visitsedona<br>
-        ТЕЛЕФОН: +7 (495) 666-02-66
+  <footer class="semi-transparency">
+    <p class="footer-contacts bold lh-26px">
+      #visitsedona<br>
+      ТЕЛЕФОН: +7 (495) 666-02-66
     </p>
-    <div class="footer-social" style="background-color: gray;">
-      <!--Внимание! В футере картинки в контейнерах .icon-back, а не текст. Не забудь в стилях ссылки отображать блоками!-->
-      <ul>
 
-        <li>  
-          <a class="social-button" href="https://twitter.com"> 
-            <img src="img/tw-icon.svg" alt="логотип Твиттер" width="17" height="15">
-          </a>
-        </li>
-
-        <li>
-          <a class="social-button" href="https://facebook.com">
-            <img src="img/fb-icon.svg" alt="логотип Фейсбук" width="12" height="22">
-          </a>
-        </li>
-        <li>
-          <a class="social-button" href="https://youtube.com">
-            <img src="img/youtube-icon.svg" alt="логотип Ютуб" width="20" height="16">
-          </a>
-        </li>	
-      </ul>
+    <div class="footer-social">
+      <a class="social-button twitter" href="https://twitter.com"></a>
+      <a class="social-button facebook" href="https://facebook.com"></a>
+      <a class="social-button youtube" href="https://youtube.com"></a>
     </div>
-    <p class="footer-copyright" style="background-color: gray;">
+
+    <p class="footer-copyright">
       <b class="lh-26px">website by:</b>
       <a class="htmla-link" href="https://htmlacademy.ru/intensive/htmlcss">
         <!--<img src="img/logo-htmla.svg"
@@ -248,8 +234,7 @@
       </svg>
       </a>
     </p>
-
-    </footer>
+  </footer>
   </div>
 </body>
 

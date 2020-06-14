@@ -37,24 +37,49 @@ h3 {
   line-height: 26px;
 }
 
-.site-navigation,
-.footer-social ul{
-	list-style: none;	
+.site-navigation {
+  list-style: none;	
 }
 
 .lh-26px{
   line-height: 26px;
 }
 
-.site-navigation a,
-.footer-social a{
+.site-navigation a {
   color: #000000;
 }
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-  color: #81b3d2;;
+  color: #81b3d2;
 }
+
+.site-navigation{
+  display: flex;
+  
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 0px;
+  margin: 0px;
+  
+}
+
+.site-navigation li {
+display: flex;
+outline: 1px solid #666;
+flex-basis: 239px;
+align-items: center;
+justify-content: center;
+height: 56px; /*если без высоты - рисует с заданными в макете внутренними отступами 79px.
+высота строки 26, по 22 внутр. отступы, итого высота li на 9px больше, чем нужно и лого не выходит за пределы контейнера*/
+}
+.site-navigation
+.main-header-logo {
+  flex-basis: 244px;
+  display: block;
+  z-index: 5;
+}
+
 .blue-back,
 .button-blue {
   background-color: #81b3d2;
@@ -64,32 +89,28 @@ h3 {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.social-button:visited,
-.social-button{
-  background-color: #81b3d2;
-  width: 46px;
-  height: 48px;
-  display: block;
-}
-.social-button img{
-  display:block;
-  margin: auto;
-  
-  
-}
 .button-blue:hover,
 .button-blue:focus,
-.social-button:hover, /*footer-social a:hover*/
+.footer-social a:hover, 
 .footer-social a:focus {
   background-color: #669ec0;
 }
 
-.social-button:active, /*.footer-social a:active*/
+.footer-social a:active, 
 .button-blue:active {
   background-color: #5496bd;
 
 }
 
+/*.cover{
+  width:280px;
+  height: 146px;
+  margin: 0px;
+}*/
+
+.blue-back p{
+  /*margin: 0px;*/
+}
 .white-text {
   color: #ffffff;
   font-size: 14px;
@@ -103,9 +124,17 @@ h3 {
 
 .blue-back {
   color: #ffffff;
-  width: 280px;
+  /*width: 280px;*/
   /*height: 256px;*/
-  padding: 46px 60px 64px;
+  /*padding: 43px 60px 61px;*/
+}
+
+.inner-grid{
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;*/
+  flex-wrap: wrap;
+  outline: 1px dashed #666;
 }
 
 .button-brown {
@@ -187,7 +216,24 @@ h3 {
 }
 
 .grid-item{
-  text-align: center;
+  
+  width: 280px;
+  padding: 43px 60px 61px;
+  
+}
+
+.content-image{
+  width: 800px;
+  /*height: 256px;*/
+  display: flex;
+  /*outline: 1px solid red;*/
+  margin: 0px;
+  padding: 0px;
+}
+
+.grid-item .content-image{
+  width: 800px;
+  height: 256px;
 }
 
 .big-button-blue{
@@ -276,6 +322,26 @@ h3 {
   color:#000000;
 }
 
+.description{
+  display: flex;
+  width: 258px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.description
+.ordinary-text {
+  display: inline-block;
+  margin-right: 39px;
+}
+
+.catalog li{
+  display: flex;
+  outline: 1px solid blue;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .rating-back{
   width: 110px;
   height: 27px;
@@ -285,9 +351,82 @@ h3 {
   padding: 5px 13px 6px 16px;
 }
 
+.semi-transparency{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0.9;
+  z-index: 5;
+}
+
+.footer-social{
+  display: inline-block;
+  width: 150px;
+ 
+}
+
+.footer-social ul{
+  display: flex;
+  flex-direction: row;
+}
+/*
+.icon-back li{
+  display: inline-block;
+  vertical-align: middle;
+  
+}
+.icon-back img {
+  align-content: center;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.icon-back {
+  margin: 0px;
+  display: flex;
+  padding: 0px;
+  justify-content: space-around;
+}
+*/
+
+.footer-social a{
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  display: inline-block;
+}
+
+.twitter{
+  background-image: url('../img/tw-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.facebook{
+  background-image: url('../img/fb-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.youtube{
+  background-image: url('../img/youtube-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
 .footer-contacts{
   text-align: left;
   text-decoration: none; /*в Edge всё равно подчёркивает телефон, как ссылку и выделяет синим */
+}
+
+.footer-copyright{
+  display: flex;
+  align-items: center;
+}
+.footer-copyright b{
+  margin-right: 10px;
 }
 
 .htmla-cprght {
