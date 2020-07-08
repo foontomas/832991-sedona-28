@@ -363,15 +363,32 @@ button {
   animation: shake 0.6s;
 }
 
-.grid-item {
+div.pictogram {
+  padding: 48px 50px 83px;
+  width: 300px;
+}
 
+.grid-item {
   width: 280px;
   padding: 48px 60px 66px;
   position: relative;
 }
 
+.pension {
+  width: 299px;
+}
+
+.burger {
+  width: 297px;
+}
+
+.devil {
+  width: 301px;
+  padding-right: 30px;
+}
+
 .text-card {
-  width: 280px;
+  width: 297px;
   text-align: center;
 }
 
@@ -394,10 +411,22 @@ button {
 
 .blue-back.grid-item {
   padding-top: 46px;
-  padding-right: 60px;
-  padding-left: 60px;
-  padding-bottom: 55px;
+  padding-right: 68px;
+  padding-left: 52px;
+  padding-bottom: 53px;
+}
 
+.blue-back.grid-item.second {
+  padding-top: 50px;
+  
+  padding-bottom: 50px;
+  
+  
+  
+}
+
+.second .text-card .card-number{
+  margin-bottom: 23px;
 }
 
 .content-image {
@@ -411,7 +440,7 @@ button {
   content: "";
   position: absolute;
   z-index: 5;
-  bottom: 169px;
+  bottom: 198px;
   right: 50%;
   margin-right: -37.5px;
   width: 75px;
@@ -424,7 +453,7 @@ button {
   content: "";
   position: absolute;
   z-index: 5;
-  bottom: 169px;
+  bottom: 198px;
   right: 50%;
   margin-right: -37px;
   width: 74px;
@@ -437,7 +466,7 @@ button {
   content: "";
   position: absolute;
   z-index: 5;
-  bottom: 169px;
+  bottom: 198px;
   right: 50%;
   margin-right: -32px;
   width: 64px;
@@ -449,7 +478,7 @@ button {
 .photo-card-1,
 .photo-card-2,
 .photo-card-3 {
-  margin-top: 121px;
+  margin-top: 110px;
   margin-bottom: 26px;
   display: inline-block;
   vertical-align: middle;
