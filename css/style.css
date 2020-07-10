@@ -405,6 +405,11 @@ div.pictogram {
   margin-bottom: 0;
 }
 
+.grey-back p.card-number{
+  margin-top: 28px;
+  margin-bottom: 23px;
+}
+
 .text-card .card-number {
   margin: 26px 0px 26px;
 }
@@ -418,16 +423,41 @@ div.pictogram {
 
 .blue-back.grid-item.second {
   padding-top: 50px;
-  
   padding-bottom: 50px;
-  
-  
-  
 }
 
-.second .text-card .card-number{
+.grey-back.grid-item {
+  padding-top: 46px;
+  padding-left: 52px;
+  padding-bottom: 55px;
+  padding-right: 68px;
+}
+
+.second .text-card .card-number {
   margin-bottom: 23px;
 }
+
+p.sights {
+  width: 250px; 
+}
+
+p.from-lw {
+  width: 261px;
+}
+
+p.grand-canyon {
+  width: 250px;
+}
+
+
+/*
+p.from-lw {
+  width: 258px;
+}
+
+p.grand-canyon {
+  width: 246px;
+}*/
 
 .content-image {
   width: 800px;
@@ -508,16 +538,16 @@ div.pictogram {
   font-weight: bold;
   line-height: 36px;
   color: #000000;
-  margin: 40px auto 25px;
+  margin: 50px auto 27px;
 }
 
-.pseudo-header+.ordinary-text {
+.pseudo-header .ordinary-text {
   line-height: 24px;
 }
 
 .interactive {
   text-align: center;
-  margin-top: 52px;
+  margin-top: 47px;
 }
 
 .map {
