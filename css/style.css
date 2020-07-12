@@ -547,7 +547,7 @@ p.grand-canyon {
 
 .interactive {
   text-align: center;
-  margin-top: 45px;
+  margin-top: 43px;
 }
 
 .map {
@@ -556,7 +556,7 @@ p.grand-canyon {
 
 .map iframe {
   width: 100%;
-  height: 713px;
+  height: 594px;
   border: 0px;
 }
 
@@ -660,7 +660,7 @@ p.grand-canyon {
 .number {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 54px;
+  margin-bottom: 53px;
   align-items: baseline;
 }
 
@@ -669,7 +669,7 @@ p.grand-canyon {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   position: relative;
 }
 
@@ -942,13 +942,13 @@ input[type="text"]:focus.input-back {
 
 .semi-transparency {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  /*align-items: center;*/
   opacity: 0.9;
   z-index: 5;
   background-color: #ffffff;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding-top: 22px;
+  padding-bottom: 30px;
   width: 100%;
 }
 
@@ -962,6 +962,9 @@ input[type="text"]:focus.input-back {
   width: 150px;
   flex-direction: row;
   flex-wrap: nowrap;
+  margin-top: 13px;
+  margin-bottom: 12px;
+  margin-right: 17px;
 }
 
 .footer-social a {
@@ -986,21 +989,40 @@ input[type="text"]:focus.input-back {
 }
 
 .footer-contacts {
-  text-align: center;
+  /*text-align: center;*/
+  justify-content: center;
   text-decoration: none;
   /*в Edge всё равно подчёркивает телефон, как ссылку и выделяет синим */
-  display: flex;
+  /*display: flex;*/
   flex-wrap: wrap;
   width: 232px;
+  margin-left: 121px;
+  /*margin-top: 1px;*/s
+  }
+
+div.phone {
+  margin-top: 9px;
 }
 
 .footer-copyright {
+  /*display: flex;
+  justify-content: center;*/
   display: flex;
-  align-items: center;
+  margin-top: 1px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 138px;
 }
 
 .footer-copyright span {
-  margin-right: 10px;
+  margin-right: 8px;
+  margin-top: 25px;
+  display: inline-block;
+  height: 26px;
+}
+
+.footer-copyright svg {
+  margin-top: 15px;
 }
 
 .htmla-cprght {
