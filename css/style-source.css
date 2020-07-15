@@ -12,19 +12,6 @@ body {
   background-color: #f2f2f2;
 }
 
-a:hover,
-button:hover {
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  border: none;
-}
-
 .main-container {
   width: 1200px;
   box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
@@ -60,6 +47,7 @@ button {
   vertical-align: middle;
   max-width: 160px;
   word-wrap: break-word;
+  text-decoration: none;
 }
 
 .main-navigation a:hover,
@@ -133,6 +121,8 @@ button {
 .blue-back,
 .button-blue {
   background-color: #81b3d2;
+  text-decoration: none;
+  border: none;
 }
 
 .main-navigation a:active {
@@ -210,6 +200,8 @@ button {
 
 .button-brown {
   background-color: #766357;
+  text-decoration: none;
+  border: none;
 }
 
 .big-button-brown {
@@ -235,6 +227,7 @@ button {
 
 .button-brown:hover {
   background-color: #604e43;
+  cursor: pointer;
 }
 
 .button-brown:active {
@@ -508,6 +501,7 @@ p.grand-canyon {
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .small-button-blue {
@@ -756,7 +750,8 @@ input[type="text"]:focus.input-back {
 
 /*для IE*/
 .sortby a,
-.sortby a:visited {
+.sortby a:visited
+.sortby a:active {
   color: rgba(0, 0, 0, 0.3);
   text-decoration: none;
   border-bottom: 1px dashed #81b3d2;
@@ -782,12 +777,17 @@ input[type="text"]:focus.input-back {
   color: #000000;
   text-decoration: none;
   border-bottom: none;
+  
 }
 
 .arrow {
   text-align: end;
   margin-left: auto;
   margin-top: 15px;
+}
+
+.arrow:focus {
+  fill: #231F20;
 }
 
 .arrow-up,
@@ -824,6 +824,10 @@ input[type="text"]:focus.input-back {
   text-decoration: none;
 }
 
+.hotel-name:hover{
+  color: #81B3D2;
+}
+
 .catalog-item-image {
   margin: 0px;
 }
@@ -854,6 +858,10 @@ input[type="text"]:focus.input-back {
   color: #81b3d2;
 }
 
+.arrow-up:active{
+  color: #81b3d2;
+}
+
 .description a:active,
 .footer-contacts a:active {
   color: rgba(0, 0, 0, 0.3);
@@ -871,6 +879,7 @@ input[type="text"]:focus.input-back {
 
 .footer-contacts a {
   color: #000000;
+  text-decoration: none;
 }
 
 .description h3 {
@@ -1029,16 +1038,16 @@ div.phone {
   margin-top: 15px;
 }
 
-.htmla-cprght {
+.htmlacademy-copyright {
   fill: #231f20;
 }
 
-.htmla-link:hover .htmla-cprght,
-.htmla-link:focus .htmla-cprght {
+.htmlacademy-link:hover .htmlacademy-copyright,
+.htmlacademy-link:focus .htmlacademy-copyright {
   fill: #81b3d2;
 }
 
-.htmla-link:active .htmla-cprght {
+.htmlacademy-link:active .htmlacademy-copyright {
   fill: #bdbbbc;
 }
 
